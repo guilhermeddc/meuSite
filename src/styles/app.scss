@@ -1,0 +1,25 @@
+html, body {
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+$dark: #252326;
+$light: #ECECEC;
+$primary: #6537A6;
+$secondary: #884ED9;
+$tertiary: #4A2D73;
