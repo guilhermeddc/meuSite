@@ -22,27 +22,27 @@
           </ul>
           <ul class="nav-social">
             <li>
-              <a :href="links.Facebook" target="_blank">
+              <a :href="links.Facebook" target="_blank" rel="”noopener”">
                 <img :src="Facebook" :alt="`Facebook ${alt}`" />
               </a>
             </li>
             <li>
-              <a :href="links.Instagram" target="_blank">
+              <a :href="links.Instagram" target="_blank" rel="”noopener”">
                 <img :src="Instagram" :alt="`Instagram ${alt}`" />
               </a>
             </li>
             <li>
-              <a :href="links.GitHub" target="_blank">
+              <a :href="links.GitHub" target="_blank" rel="”noopener”">
                 <img :src="GitHub" :alt="`GitHub ${alt}`" />
               </a>
             </li>
             <li>
-              <a :href="links.Linkedin" target="_blank">
+              <a :href="links.Linkedin" target="_blank" rel="”noopener”">
                 <img :src="Linkedin" :alt="`Linkedin ${alt}`" />
               </a>
             </li>
             <li>
-              <a :href="links.WhatsApp" target="_blank">
+              <a :href="links.WhatsApp" target="_blank" rel="”noopener”">
                 <img :src="WhatsApp" :alt="`WhatsApp ${alt}`" />
               </a>
             </li>
@@ -132,12 +132,14 @@ nav {
   margin: 10px;
 }
 .nav-links {
+  margin-left: 20px;
   display: flex;
   & li a {
     margin: 7px;
     font-weight: 500;
     font-size: 16px;
     color: $light;
+    transition: all 0.3s;
     &:hover {
       opacity: 0.7;
     }
@@ -148,6 +150,7 @@ nav {
   & li a img {
     width: 28px;
     margin: 0 10px 0 0;
+    transition: all 0.3s;
     &:hover {
       opacity: 0.7;
     }

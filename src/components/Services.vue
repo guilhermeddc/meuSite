@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 #services {
-  padding: 50px 0;
+  padding: 50px 0 100px;
 }
 .services-title {
   text-align: center;
@@ -83,6 +83,7 @@ export default {
   border-radius: 25px;
   color: $light;
   padding: 10px;
+  box-shadow: 0 0 2px 1px rgba($color: $dark, $alpha: 0.5);
   & h2 {
     font-weight: 600;
     padding-bottom: 10px;
