@@ -38,6 +38,7 @@ section {
     padding-left: 50px;
     padding-right: 50px;
     text-transform: uppercase;
+    text-align: center;
   }
   & h2 {
     color: $light;
@@ -45,6 +46,7 @@ section {
     font-weight: 400;
     font-size: 2.5em;
     margin-bottom: 30px;
+    text-align: center;
   }
   & a {
     color: $light;

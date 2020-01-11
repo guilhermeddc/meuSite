@@ -81,6 +81,7 @@ section {
     & textarea {
       flex: 1;
       min-width: 300px;
+      min-height: 200px;
       margin: 10px;
       border: none;
       border-radius: 10px;
@@ -92,6 +93,9 @@ section {
     }
     & button {
       flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 10px;
       background: $primary;
       border: none;
@@ -107,6 +111,33 @@ section {
   }
   & .nao-aparece {
     display: none;
+  }
+}
+@media screen and (max-width: 762px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    & p {
+      font-style: italic;
+      color: $light;
+      font-weight: 300;
+      text-align: center;
+      padding: 0 20px 20px;
+    }
+    & form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px 20px;
+    }
+    & button {
+      & img {
+        &::before {
+          content: ' Enviar'
+        }
+      }
+    }
   }
 }
 </style>

@@ -74,7 +74,7 @@ footer {
   & .nav-social {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 50px 5px;
     & li a img {
       width: 50px;
       padding: 5px;

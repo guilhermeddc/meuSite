@@ -76,9 +76,10 @@ export default {
 .card {
   flex: 1;
   display: flex;
+  min-width: 200px;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   border-radius: 25px;
   color: $light;

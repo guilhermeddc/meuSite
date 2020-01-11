@@ -30,9 +30,13 @@ export default {
 <style lang="scss" scoped>
 .card-portfolio {
   flex: 1;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 30px;
   background: $light;
   border-radius: 5px;
+  min-width: 260px;
+  max-width: 360px;
   padding: 10px;
   box-shadow: 0 0 2px 1px rgba($color: $dark, $alpha: 0.5);
   transition: all 0.3s;

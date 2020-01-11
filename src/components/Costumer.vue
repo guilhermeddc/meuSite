@@ -57,4 +57,20 @@ export default {
     }
   }
 }
+@media screen and (max-width: 762px) {
+  .costumer {
+    padding: 30px 0;
+    & .costumer-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      & img {
+        border-radius: 25px;
+        padding: 20px;
+        max-width: 220px;
+      }
+    }
+  }
+}
 </style>

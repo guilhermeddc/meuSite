@@ -24,6 +24,16 @@ img {
   padding: 0 15px
 }
 
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 5px
+  }
+  html, body, input, textarea {
+    font-size: 12px;
+    min-width: 260px !important;
+  }
+}
+
 $dark: #252326;
 $light: #ECECEC;
 $primary: #6537A6;

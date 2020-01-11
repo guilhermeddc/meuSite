@@ -48,8 +48,8 @@ export default {
 <style lang="scss" scoped>
 #portfolio {
   background: $tertiary;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 70px;
   & h2 {
     text-align: center;
     color: $light;
@@ -67,6 +67,7 @@ export default {
   & .portfolio-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>

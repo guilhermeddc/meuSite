@@ -43,4 +43,13 @@ export default {
     }
   }
 }
+@media screen and (max-width: 762px) {
+  .button-fixed {
+    bottom: 30px;
+    right: 15px;
+    & a img {
+      width: 50px;
+    }
+  }
+}
 </style>
