@@ -23,7 +23,7 @@
         </p>
         <h3>Novembro 2019 - Novo ciclo iniciado</h3>
         <p>
-          Meu primerio emprego em uma empresa da area, trabalhando com diferentes tecnologias e utilizando métodos ágeis.
+          Meu primerio emprego em uma empresa da área, trabalhando com diferentes tecnologias e utilizando métodos ágeis.
         </p>
       </div>
     </div>

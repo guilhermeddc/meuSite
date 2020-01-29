@@ -2,15 +2,15 @@
   <section id="contact">
     <h2>Entre em contato</h2>
     <p>Entre em contato e peça um orçamento ou tire uma duvida! :)</p>
-    <form action="enviar.php" method="post" novalidate="novalidate" class="container">
+    <form @submit.prevent="sendEmail" class="contact-form container">
       <div class="input-form">
         <input type="text" placeholder="Seu nome"/>
         <input type="email" placeholder="Seu e-mail"/>
         <input type="tel" placeholder="Seu telefone"/>
         <input type="text" placeholder="Assunto"/>
       </div>
-      <textarea placeholder="Digite aqui..."></textarea>
-      <button type="submit"><img :src="Enter" alt=""></button>
+      <textarea placeholder="Digite aqui..."/>
+      <button type="submit"><img :src="Enter" alt="enviar"></button>
 
       <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
       <input type="text" class="nao-aparece" name="leaveblank" />
@@ -23,14 +23,25 @@
 
 <script>
 import Enter from '../assets/icons/Enter.png'
+import emailjs from 'emailjs-com';
 
 export default {
   name: "Contact",
-  data() {
-    return {
-      Enter
+  data: () => ({
+    Enter,
+  }),
+  methods: {
+    sendEmail: (e) => {
+      emailjs.sendForm('gmail', 'template_YGm7YMlb', e.target, 'user_yrAnNFe9nyioAbKbOmHYH')
+        .then(response => {
+          // eslint-disable-next-line no-console
+            console.log('SUCCESS!', response.status, response.text);
+        }, error => {
+          // eslint-disable-next-line no-console
+            console.log('FAILED...', error);
+        });
     }
-  }
+  },
 };
 </script>
 
