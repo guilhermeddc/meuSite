@@ -97,6 +97,7 @@ export default {
   background: $tertiary;
   box-shadow: 0 0 5px 3px rgba($color: $dark, $alpha: 0.5);
   transition: all 0.3s;
+  z-index: 30;
   & .menu {
     display: none;
     width: 64px;

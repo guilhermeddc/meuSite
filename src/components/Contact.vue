@@ -4,12 +4,12 @@
     <p>Entre em contato e peça um orçamento ou tire uma duvida! :)</p>
     <form @submit.prevent="sendEmail" class="contact-form container">
       <div class="input-form">
-        <input type="text" placeholder="Seu nome"/>
-        <input type="email" placeholder="Seu e-mail"/>
-        <input type="tel" placeholder="Seu telefone"/>
-        <input type="text" placeholder="Assunto"/>
+        <input type="text" placeholder="Seu nome" v-model="name"/>
+        <input type="email" placeholder="Seu e-mail" v-model="email"/>
+        <input type="tel" placeholder="Seu telefone" v-model="phone"/>
+        <input type="text" placeholder="Assunto" v-model="subject"/>
       </div>
-      <textarea placeholder="Digite aqui..."/>
+      <textarea placeholder="Digite aqui..." v-model="message"/>
       <button type="submit"><img :src="Enter" alt="enviar"></button>
 
       <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
@@ -29,13 +29,25 @@ export default {
   name: "Contact",
   data: () => ({
     Enter,
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
   }),
   methods: {
-    sendEmail: (e) => {
-      emailjs.sendForm('gmail', 'template_YGm7YMlb', e.target, 'user_yrAnNFe9nyioAbKbOmHYH')
+    sendEmail() {
+      const templateParams = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        subject: this.subject,
+        message: this.subject,
+      };
+      emailjs.send('gmail', 'template_YGm7YMlb', templateParams, 'user_yrAnNFe9nyioAbKbOmHYH')
         .then(response => {
           // eslint-disable-next-line no-console
-            console.log('SUCCESS!', response.status, response.text);
+            console.log('SUCCESS!', response.status, response.text, templateParams);
         }, error => {
           // eslint-disable-next-line no-console
             console.log('FAILED...', error);
