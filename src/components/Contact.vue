@@ -24,6 +24,8 @@
 <script>
 import Enter from '../assets/icons/Enter.png'
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss'
 
 export default {
   name: "Contact",
@@ -46,11 +48,17 @@ export default {
       };
       emailjs.send('gmail', 'template_YGm7YMlb', templateParams, 'user_yrAnNFe9nyioAbKbOmHYH')
         .then(response => {
-          // eslint-disable-next-line no-console
-            console.log('SUCCESS!', response.status, response.text, templateParams);
+          Swal.fire({
+            title: 'Sucesso',
+            icon: 'success',
+            confirmButtonText: response.text
+          })
         }, error => {
-          // eslint-disable-next-line no-console
-            console.log('FAILED...', error);
+          Swal.fire({
+            title: 'Erro!',
+            icon: 'error',
+            confirmButtonText: error
+          })
         });
     }
   },
